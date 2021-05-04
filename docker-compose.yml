@@ -1,0 +1,7 @@
+version: "2"
+
+services:
+  lyric2influx:
+    image: thijswm/lyric2influx
+    env_file:
+    - settings.env
