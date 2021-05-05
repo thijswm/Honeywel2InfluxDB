@@ -2,6 +2,7 @@
 Connects with a Honeywell Lyric thermostat through Honeywell API and writes temperature to InfluxDB.
 The indoor temperature and temperature set point are collected and written per thermostat.
 For source check: https://github.com/thijswm/Lyric2Influx
+Docker image can be found at: https://hub.docker.com/repository/docker/thijswm/lyric2influx
 
 # Connect with Honeywell API
 To be able to let this image connect with the thermostat you need to have a token from the Honeywell API.
