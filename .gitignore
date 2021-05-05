@@ -4,4 +4,6 @@
 
 *.suo
 *.sqlite
+settings_local.env
 /.vs/*
+/env/*
