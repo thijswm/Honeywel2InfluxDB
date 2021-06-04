@@ -23,7 +23,7 @@ Or use an online website like: https://www.base64encode.org/
 `curl -X POST -H 'Authorization: Basic [[BASE64-ENCODED-STRING]]' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Accept: application/json' -d 'grant_type=authorization_code&code=[[CODE]]&redirect_uri=none' https://api.honeywell.com/oauth2/token`  
 You can also use a site like: https://reqbin.com/curl
 9. If everything is ok, the server will return a response similar as:  
-`{"access_token":"494hiudfhiuhdfi84949df","refresh_token":"jdfoijodfoUHdud83834","expires_in":"1799", "token_type":"Bearer"}`
+`{"access_token":"494aiudfheuhdfi84949de","refresh_token":"jdaoijodfoUHdud13532","expires_in":"1799", "token_type":"Bearer"}`
 
 # Description of the Environment Variables
 This image has the following environment variables 
