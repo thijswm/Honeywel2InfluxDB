@@ -20,8 +20,7 @@ Copy paste the code value as you will need this code in step 8.
 `echo -n "[[CONSUMERKEY]]:[[CONSUMERSECRET]]" | base64`  
 Or use an online website like: https://www.base64encode.org/
 8. Finally make the last webrequest to the Honeywell API to retrieve the Access Token and Refresh Token. Make sure to replace the Base64 encoded string and the CODE:  
-`curl -X POST -H 'Authorization: Basic [[BASE64-ENCODED-STRING]]' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Accept: application/json' -d 'grant_type=authorization_code&code=[[CODE]]&redirect_uri=none' https://api.honeywell.com/oauth2/token`  
-You can also use a site like: https://reqbin.com/curl
+`curl -X POST -H "Authorization: Basic [[BASE64-ENCODED-STRING]]" -H "Content-Type: application/x-www-form-urlencoded" -H "Accept: application/json" -d "grant_type=authorization_code&code=[[CODE]]&redirect_uri=none" https://api.honeywell.com/oauth2/token`  You can also use a site like: https://reqbin.com/curl
 9. If everything is ok, the server will return a response similar as:  
 `{"access_token":"494aiudfheuhdfi84949de","refresh_token":"jdaoijodfoUHdud13532","expires_in":"1799", "token_type":"Bearer"}`
 
