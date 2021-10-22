@@ -55,8 +55,14 @@ def loop():
                 for thermostat in location.thermostats:
                     uniqueId = "{}:{}".format(location.name,thermostat.name)
                     indoorTemperature = float(thermostat.indoorTemperature)
-                    temperatureSetPoint = float(thermostat.temperatureSetpoint)  
-                    point = Point(uniqueId).field("indoorTemperature",indoorTemperature).field("temperatureSetPoint",temperatureSetPoint)                    
+                    temperatureSetPoint = float(thermostat.temperatureSetpoint)
+                    operationStatus = thermostat.operationStatus()
+                    isHeating = False
+                    if "mode" in operationStatus:
+                        mode = operationStatus.get("mode")
+                        if mode == "Heat":
+                            isHeating = True
+                    point = Point(uniqueId).field("indoorTemperature",indoorTemperature).field("temperatureSetPoint",temperatureSetPoint).field("isHeating",isHeating)
                     write_api.write(bucket=bucket,record=point)
               sleep(POLL_INTERVAL)
 
